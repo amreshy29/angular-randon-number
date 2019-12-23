@@ -14,14 +14,14 @@ export class GameControlComponent implements OnInit {
   ngOnInit() {
   }
 
-  onGameStart() {
+  onStartGame() {
     this.interval = setInterval(()=> {
       this.intervalFired.emit(this.lastNumber + 1);
       this.lastNumber++;
     }, 1000)
   }
 
-  onGameEnd() {
+  onPauseGame() {
     clearInterval(this.interval)
   }
 }
